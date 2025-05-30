@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contacto</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script>
+    function validarFormulario() {
+      var nombre = document.forms["formulario"]["nombre"].value;
+      var email = document.forms["formulario"]["email"].value;
+      if (nombre == "" || email == "") {
+        alert("Por favor, complete todos los campos.");
+        return false;
+      }
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <center>
+    <header>
+      <header style="background-color: rgb(240, 161, 213);">
+      <img src="dulce frescura.jpeg" width="200"heigth="330">
+      <h1> DULCE FRESCURA </h1>
+      <nav>
+        <ul>
+          <li><a href="index.html" style="background-color:rgb(212, 145, 173); font-family:Georgia, 'Times New Roman', Times, serif; font-size: larger;">Inicio</a></li>
+          <li><a href="mision.html" style="background-color:rgb(212, 145, 173); font-family:Georgia, 'Times New Roman', Times, serif; font-size: larger;">Misión y Visión</a></li>
+          <li><a href="productos.html" style="background-color:rgb(212, 145, 173); font-family:Georgia, 'Times New Roman', Times, serif; font-size: larger;">Productos</a></li>
+        </ul>
+      </nav>
+    </header> 
+  </center>
+<center>
+  <main>
+    <h1>Contáctanos</h1>
+    <form name="formulario" action="procesar_formulario.php" method="POST" onsubmit="return validarFormulario()">
+      <label>Nombre:</label>
+      <input type="text" name="nombre"><br>
+
+      <label>Email:</label>
+      <input type="email" name="email"><br>
+
+      <label>Mensaje:</label>
+      <textarea name="mensaje"></textarea><br>
+
+      <input type="submit" value="Enviar">
+    </form>
+  </main>
+  </center>
+</body>
+</html>
